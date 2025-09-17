@@ -1,0 +1,51 @@
+.container {
+  padding: 16px;
+}
+.header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+.input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.add {
+  background: #2980b9;
+  color: #fff;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+}
+.calc {
+  background: #f39c12;
+  color: #fff;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+}
+.result {
+  margin-top: 16px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+}
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+}

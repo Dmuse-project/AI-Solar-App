@@ -1,0 +1,35 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.form button {
+  background: #fbbf24;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.article {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  line-height: 1.6;
+}

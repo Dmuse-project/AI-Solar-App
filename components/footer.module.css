@@ -1,0 +1,14 @@
+.footer {
+ 
+  padding: 14px 16px;
+  background: #111;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.footer .row {
+  display: flex;
+  gap: 12px;
+}

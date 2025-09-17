@@ -1,0 +1,75 @@
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatButton {
+  background: #fbbf24;
+  color: #111;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.chatWindow {
+  width: 320px;
+  height: 420px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.userMsg {
+  text-align: right;
+  background: #fbbf24;
+  color: #111;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 12px 12px 0 12px;
+  display: inline-block;
+}
+
+.botMsg {
+  text-align: left;
+  background: #f3f4f6;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.inputArea {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.inputArea input {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  outline: none;
+}
+
+.inputArea button {
+  background: #fbbf24;
+  border: none;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}

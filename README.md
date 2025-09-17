@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☀️ Solar AI Application  
 
-## Getting Started
+A modern AI-powered platform that helps users **plan, calculate, and shop solar energy solutions**.  
+It integrates an **AI Chatbot**, an **AI Solar Calculator**, and a **Cart system** into a sleek, professional interface.  
 
-First, run the development server:
+---
+
+## 📸 Preview  
+
+![Solar AI Application Screenshot](![alt text](image.png))  
+*(Replace with the actual path or link to your screenshot)*  
+
+---
+
+## 🚀 Features  
+
+### ⚡ AI Solar Calculator  
+- Calculates the ideal solar setup based on energy needs.  
+- Suggests **panel sizes, inverter capacity, and battery requirements**.  
+- Instantly provides smart recommendations.  
+
+### 🤖 AI Chatbot  
+- Acts as a **24/7 solar assistant**.  
+- Guides users on choosing the right solar products.  
+- Provides explanations and technical support.  
+
+### 🛒 Cart System  
+- Add AI-recommended products directly to cart.  
+- Manage items and prepare for checkout.  
+- Clean, intuitive UI for smooth shopping.  
+
+---
+
+## 🛠️ Tech Stack  
+
+- **Framework:** Next.js (App Router)  
+- **Frontend:** React, Tailwind CSS  
+- **AI:** OpenAI API (chat + calculator)  
+- **State Management:** React Hooks  
+- **Other Tools:** jsPDF, React-Markdown  
+
+---
+
+## 📂 Project Structure  
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+app/
+ ├─ layout.js          # Global layout  
+ ├─ page.js            # Homepage  
+ ├─ calculator/        # AI Solar Calculator  
+ ├─ chatbot/           # AI Chatbot  
+ ├─ cart/              # Cart system  
+ ├─ api/               # API routes (AI + cart logic)  
