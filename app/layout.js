@@ -24,7 +24,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Photon Solar Nigeria',
+  title: 'Genesis Eco-Power systems',
   description: 'Reliable solar power solutions for Nigerian homes and businesses',
 }
 
