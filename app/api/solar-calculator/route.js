@@ -52,7 +52,7 @@ export async function POST(req) {
 
 // Note: modified the prompt.
     const prompt = `
-    Act as a professional solar consultant in Nigeria. your task is to give me an accurate analysis  Based on:
+    Act as a professional solar consultant in Nigeria. your task is to give me an accurate analysis Based on:
     - Appliances: ${appliances}
     - Daily Usage: ${usage} hours
     - Budget: ₦${budget}
@@ -63,7 +63,7 @@ export async function POST(req) {
 2. **Solar Panels Needed**: ...
 3. **Batteries**: ...
 4. **Inverter**: ...
-5. **Recommendation/Notes**: ...
+5. **Recommendation/Notes**: (brief and concise)
 
 ### Important:
 - Use **latest Nigerian prices (2025)**.  
@@ -71,7 +71,7 @@ export async function POST(req) {
 - Keep response **brief, structured,  professional and easy to read**.
 
     `;
-// 5. **Estimated Cost**: ...
+
 
 
 
