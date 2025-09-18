@@ -51,72 +51,31 @@ export async function POST(req) {
     const { name, email, phone, appliances, usage, budget } = body;
 
 // Note: modified the prompt.
-//     const prompt = `
-//     You are a professional Nigerian solar consultant. Based on:
-//     - Appliances: ${appliances}
-//     - Daily Usage: ${usage} hours
-//     - Budget: ₦${budget}
-//     Recommend an optimal solar system (panels, inverter, batteries) make it concise brief and up to date with latests price in nigeria.
-//     Format it like this:
+    const prompt = `
+    Act as a professional solar consultant in Nigeria. your task is to give me an accurate analysis  Based on:
+    - Appliances: ${appliances}
+    - Daily Usage: ${usage} hours
+    - Budget: ₦${budget}
+    Recommend an optimal solar system (panels, inverter, batteries) make it concise brief and up to date with latests price in nigeria.
+    Format it like this:
 
-// 1. **System Size**: (e.g. 2kVA inverter + 2 x 200Ah battery)
-// 2. **Solar Panels Needed**: ...
-// 3. **Batteries**: ...
-// 4. **Inverter**: ...
+1. **System Size**: (e.g. 2kVA inverter + 2 x 200Ah battery)
+2. **Solar Panels Needed**: ...
+3. **Batteries**: ...
+4. **Inverter**: ...
+5. **Recommendation/Notes**: ...
+
+### Important:
+- Use **latest Nigerian prices (2025)**.  
+- Clearly state that **prices vary by location, brand, and market changes**.  
+- Keep response **brief, structured,  professional and easy to read**.
+
+    `;
 // 5. **Estimated Cost**: ...
-// 6. **Recommendation/Notes**: ...
-
-// Keep it realistic, affordable  clear, structured, and easy to read.
-//     `;
 
 
- 
 
-// const prompt = `  
-// You are a **world-class Nigerian solar consultant** with expert knowledge of the local renewable energy market.  
-// Your task is to provide an **accurate, practical, and cost-effective solar system design** based on the following inputs:  
 
-// - Appliances: ${appliances}  
-// - Average Daily Usage: ${usage} hours/day  
-// - Maximum Budget: ₦${budget}  
-
-// ### Output Requirements:  
-
-// 1. **System Size & Configuration**  
-//    - Clearly specify inverter size (e.g., 3.5 kVA hybrid inverter)  
-//    - Battery bank sizing (capacity, number of units, chemistry, brand if common in Nigeria)  
-//    - Solar panel array size (total watts, number of panels, brand/capacity).  
-
-// 2. **Solar Panels**  
-//    - List popular brands available in Nigeria (e.g., Jinko, Longi, Canadian Solar).  
-//    - Include capacity per panel and number of panels required.  
-//    - State approximate cost range in Naira.  
-
-// 3. **Battery Bank**  
-//    - Type (Lithium-ion, Lead-acid, Tubular, etc.), capacity (Ah), and recommended brands.  
-//    - Price range in Naira.  
-
-// 4. **Inverter / Charge Controller**  
-//    - Specify inverter type (off-grid, hybrid, string).  
-//    - Include charge controller rating (MPPT preferred) and efficiency.  
-//    - State approximate cost range.  
-
-// 5. **Estimated Total Cost (₦)**  
-//    - Provide a breakdown of component costs + overall system cost.  
-//    - Ensure values reflect the **latest Nigerian market prices** (2025).  
-
-// 6. **Additional Notes / Recommendations**  
-//    - Highlight installation tips, warranty considerations, and realistic system lifespan.  
-//    - Suggest alternatives if budget is too low (e.g., smaller system, modular upgrades).  
-//    - Mention cost-saving options without compromising quality.  
-
-// ### Style Guidelines:  
-// - Be **concise but structured** (use bullet points/tables where possible).  
-// - Focus on **realistic availability** of products in Nigeria.  
-// - Always ensure prices are **up-to-date and market-accurate**.  
-// - Avoid generic global pricing; reference **local Nigerian solar market prices**.  
-
-// `  
 
 
     const completion = await openai.chat.completions.create({
