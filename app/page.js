@@ -22,7 +22,7 @@ export default function Home() {
     });
 
     // do your normal action here (open form, redirect, etc.)
-    alert("Quote request triggered!");
+    // alert("Quote request triggered!");
   };
 
     const handleCalculatorClick = () => {
@@ -33,7 +33,7 @@ export default function Home() {
     });
 
     // your calculator logic
-    alert("Solar Calculator opened");
+    // alert("Solar Calculator opened");
   };
 
 
