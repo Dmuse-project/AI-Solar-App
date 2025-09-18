@@ -70,81 +70,53 @@ export async function POST(req) {
 //     `;
 
 
-//     const prompt= `
+ 
 
-// You are a professional Nigerian solar engineer consultant. Given the following inputs:
+// const prompt = `  
+// You are a **world-class Nigerian solar consultant** with expert knowledge of the local renewable energy market.  
+// Your task is to provide an **accurate, practical, and cost-effective solar system design** based on the following inputs:  
 
-// Appliances: ${appliances}
+// - Appliances: ${appliances}  
+// - Average Daily Usage: ${usage} hours/day  
+// - Maximum Budget: ₦${budget}  
 
-// Average Daily Usage: ${usage} hours per day
+// ### Output Requirements:  
 
-// Maximum Budget: ₦${budget}
+// 1. **System Size & Configuration**  
+//    - Clearly specify inverter size (e.g., 3.5 kVA hybrid inverter)  
+//    - Battery bank sizing (capacity, number of units, chemistry, brand if common in Nigeria)  
+//    - Solar panel array size (total watts, number of panels, brand/capacity).  
 
-// Produce a concise, up-to-date solar system recommendation (solar panels, inverter, battery bank) with current market prices in Nigeria.
+// 2. **Solar Panels**  
+//    - List popular brands available in Nigeria (e.g., Jinko, Longi, Canadian Solar).  
+//    - Include capacity per panel and number of panels required.  
+//    - State approximate cost range in Naira.  
 
-// Response Format:
+// 3. **Battery Bank**  
+//    - Type (Lithium-ion, Lead-acid, Tubular, etc.), capacity (Ah), and recommended brands.  
+//    - Price range in Naira.  
 
-// System Size & Configuration: (e.g. 2 kVA inverter + 2 × 200 Ah batteries)
+// 4. **Inverter / Charge Controller**  
+//    - Specify inverter type (off-grid, hybrid, string).  
+//    - Include charge controller rating (MPPT preferred) and efficiency.  
+//    - State approximate cost range.  
 
-// Solar Panels Required: brand/capacity/number
+// 5. **Estimated Total Cost (₦)**  
+//    - Provide a breakdown of component costs + overall system cost.  
+//    - Ensure values reflect the **latest Nigerian market prices** (2025).  
 
-// Battery Bank: type, capacity, brand if relevant
+// 6. **Additional Notes / Recommendations**  
+//    - Highlight installation tips, warranty considerations, and realistic system lifespan.  
+//    - Suggest alternatives if budget is too low (e.g., smaller system, modular upgrades).  
+//    - Mention cost-saving options without compromising quality.  
 
-// Inverter / Charge Controller: specifications, brand
+// ### Style Guidelines:  
+// - Be **concise but structured** (use bullet points/tables where possible).  
+// - Focus on **realistic availability** of products in Nigeria.  
+// - Always ensure prices are **up-to-date and market-accurate**.  
+// - Avoid generic global pricing; reference **local Nigerian solar market prices**.  
 
-// Estimated Total Cost (₦): inclusive of all components
-
-// Additional Notes / Recommendations: e.g. suggestions on installation, warranty, sizing margins, or cost-saving alternatives
-
-// Ensure the recommendation is: realistic, affordable, clearly structured, and uses the latest available prices in Nigeria.
-
-//     `
-
-const prompt = `  
-You are a **world-class Nigerian solar consultant** with expert knowledge of the local renewable energy market.  
-Your task is to provide an **accurate, practical, and cost-effective solar system design** based on the following inputs:  
-
-- Appliances: ${appliances}  
-- Average Daily Usage: ${usage} hours/day  
-- Maximum Budget: ₦${budget}  
-
-### Output Requirements:  
-
-1. **System Size & Configuration**  
-   - Clearly specify inverter size (e.g., 3.5 kVA hybrid inverter)  
-   - Battery bank sizing (capacity, number of units, chemistry, brand if common in Nigeria)  
-   - Solar panel array size (total watts, number of panels, brand/capacity).  
-
-2. **Solar Panels**  
-   - List popular brands available in Nigeria (e.g., Jinko, Longi, Canadian Solar).  
-   - Include capacity per panel and number of panels required.  
-   - State approximate cost range in Naira.  
-
-3. **Battery Bank**  
-   - Type (Lithium-ion, Lead-acid, Tubular, etc.), capacity (Ah), and recommended brands.  
-   - Price range in Naira.  
-
-4. **Inverter / Charge Controller**  
-   - Specify inverter type (off-grid, hybrid, string).  
-   - Include charge controller rating (MPPT preferred) and efficiency.  
-   - State approximate cost range.  
-
-5. **Estimated Total Cost (₦)**  
-   - Provide a breakdown of component costs + overall system cost.  
-   - Ensure values reflect the **latest Nigerian market prices** (2025).  
-
-6. **Additional Notes / Recommendations**  
-   - Highlight installation tips, warranty considerations, and realistic system lifespan.  
-   - Suggest alternatives if budget is too low (e.g., smaller system, modular upgrades).  
-   - Mention cost-saving options without compromising quality.  
-
-### Style Guidelines:  
-- Be **concise but structured** (use bullet points/tables where possible).  
-- Focus on **realistic availability** of products in Nigeria.  
-- Always ensure prices are **up-to-date and market-accurate**.  
-- Avoid generic global pricing; reference **local Nigerian solar market prices**.  
-
-`  
+// `  
 
 
     const completion = await openai.chat.completions.create({
