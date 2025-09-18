@@ -1,12 +1,15 @@
 
 // app/layout.js
 import './globals.css'
+
+import Script from "next/script";
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import Chatbot from '@/components/chatbot'
 // import {Analytics} from "@vercel/analytics"
-import { Analytics } from '@vercel/analytics/react'
+// import { Analytics } from '@vercel/analytics/react'
 import { Inter, Poppins } from "next/font/google";
+import Analyticss from '@/components/analytics';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,10 +31,32 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+        <head>
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-D0Y9HQYB11`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-D0Y9HQYB11', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
       <body className='container'>
         <Nav className="nav-container" />
         <main className='main-container'>{children}</main>
-        <Analytics />
+      
+        <Analyticss />
         <Chatbot />
         <Footer className="footer-container" />
       </body>
@@ -39,3 +64,5 @@ export default function RootLayout({ children }) {
   )
 }
 
+
+  

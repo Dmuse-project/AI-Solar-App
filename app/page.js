@@ -5,9 +5,38 @@
 // app/page.js (Landing)
 'use client'
 import styles from './app.module.css'
+import * as gtag from "../lib/gtag"
+
+
+
 
 
 export default function Home() {
+
+    const handleQuoteClick = () => {
+    gtag.event({
+      action: "click_get_quote",   // custom action name
+      category: "engagement",      // GA event category
+      label: "Get Quote Button",   // useful for reports
+      value: 1,                    // optional, e.g. number of clicks
+    });
+
+    // do your normal action here (open form, redirect, etc.)
+    alert("Quote request triggered!");
+  };
+
+    const handleCalculatorClick = () => {
+    gtag.event({
+      action: "click_solar_calculator",
+      category: "engagement",
+      label: "Solar Calculator Button",
+    });
+
+    // your calculator logic
+    alert("Solar Calculator opened");
+  };
+
+
   return (
     <div className={styles.container}>
       <header className={styles.hero} id="home">
@@ -20,8 +49,8 @@ export default function Home() {
           <h1>Reliable Solar Power for Every Nigerian Home & Business</h1>
           <p>Say goodbye to blackouts and high fuel costs. Switch to clean, affordable solar today.</p>
           <div className={styles.ctaWrap}>
-            <a href="#contact" className={styles.ctaBtn}>Get a Free Quote</a>
-            <a href="/calculator" className={styles.ctaOutline}>Solar Calculator</a>
+          <button className={styles.button} onClick={handleQuoteClick}> <a href="#contact" className={styles.ctaBtn}>Get a Free Quote</a></button>
+          <button className={styles.button} onClick={handleCalculatorClick}> <a href="/calculator" className={styles.ctaOutline}>Solar Calculator</a> </button> 
           </div>
         </div>
       </header>
