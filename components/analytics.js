@@ -1,3 +1,4 @@
+
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
@@ -9,7 +10,10 @@ export default function Analyticss() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const url = pathname + searchParams.toString();
+    // Convert searchParams to a proper string
+    const query = searchParams.toString();
+    const url = query ? `${pathname}?${query}` : pathname;
+
     gtag.pageview(url);
   }, [pathname, searchParams]);
 
