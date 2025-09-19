@@ -9,8 +9,9 @@ import Chatbot from '@/components/chatbot'
 // import {Analytics} from "@vercel/analytics"
 // import { Analytics } from '@vercel/analytics/react'
 import { Inter, Poppins } from "next/font/google";
-import Analyticss from '@/components/analytics';
-import { usePathname } from "next/navigation";
+
+import ClientAnalytics from '@/components/clientAnalytics';
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-    const pathname = usePathname();
+
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
         <head>
@@ -58,7 +59,7 @@ export default function RootLayout({ children }) {
         <Nav className="nav-container" />
         <main className='main-container'>{children}</main>
       
-        {pathname !== "/404" && <Analyticss />}
+        <ClientAnalytics /> 
         <Chatbot />
         <Footer className="footer-container" />
       </body>
