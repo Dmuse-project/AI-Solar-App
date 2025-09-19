@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { Suspense } from "react";
-import Analyticss from "./Analyticss";
+import Analyticss from "./analytics";
 
 export default function ClientAnalytics() {
   const pathname = usePathname();
