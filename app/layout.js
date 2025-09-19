@@ -26,9 +26,43 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Genesis Eco-Power systems',
-  description: 'Reliable solar power solutions for Nigerian homes and businesses',
-}
+  title: "Genesis Eco-Power Systems | Reliable Solar Energy in Nigeria",
+  description:
+    "Genesis Eco-Power Systems delivers affordable, reliable solar solutions for Nigerian homes and businesses. Explore inverters, batteries, and solar panels with expert installation.",
+  keywords: [
+    "solar energy Nigeria",
+    "solar panels Nigeria",
+    "inverters",
+    "batteries",
+    "renewable energy",
+    "Genesis Eco-Power Systems",
+  ],
+  openGraph: {
+    title: "Genesis Eco-Power Systems | Reliable Solar Energy in Nigeria",
+    description:
+      "Affordable and reliable solar solutions tailored for Nigerian homes and businesses. Let Genesis Eco-Power Systems power your future sustainably.",
+    url: "https://ai-solar-app.vercel.app/",
+    siteName: "Genesis Eco-Power Systems",
+    images: [
+      {
+        url: "/image.png", // replace with an actual image in /public
+        width: 1200,
+        height: 630,
+        alt: "Genesis Eco-Power Systems - Reliable Solar Energy in Nigeria",
+      },
+    ],
+    locale: "en_NG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Genesis Eco-Power Systems | Reliable Solar Energy in Nigeria",
+    description:
+      "Affordable, reliable solar systems for Nigerian homes and businesses. Explore inverters, batteries, and solar panels with expert installation.",
+    images: ["/image.png"], // same as above
+  },
+};
+
 
 export default function RootLayout({ children }) {
 
