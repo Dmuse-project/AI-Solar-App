@@ -25,6 +25,8 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+
+
 export const metadata = {
   title: "Genesis Eco-Power Systems | Reliable Solar Energy in Nigeria",
   description:
@@ -69,6 +71,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
         <head>
+  <meta property="og:title" content="Genesis Eco-Power Systems" />
+<meta property="og:description" content="Reliable solar power solutions for Nigerian homes and businesses" />
+<meta property="og:image" content="https://ai-solar-app.vercel.app/og-image.png" />
+<meta property="og:url" content="https://ai-solar-app.vercel.app" />
+
         {/* Google Analytics */}
         <Script
           strategy="afterInteractive"
